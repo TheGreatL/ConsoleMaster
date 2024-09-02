@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel="shortcut icon" href="src/assets/icons/white-controller.png" type="image/x-icon" />
+  <link rel="stylesheet" href="src/styles/style.css" />
+  <style>
+    .carousell::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script type="module" src="" defer></script>
+  <title>Console Master</title>
+</head>
+
+<body class="bg-blue-800">
+  <header class=" sticky top-0 z-50 bg-blue-700 ">
+    <div class="container max-w-full flex flex-row px-3 ">
+      <div class="flex justify-center items-center flex-col px-3 sm:flex-shrink-0 ">
+        <a href="#" class=" sm:text-xl text-xs uppercase font-semibold text-white">
+          Console
+          <img class="sm:max-w-14 max-w-10  inline-block rotate-12 " title="Console Master"
+            src="src/assets/icons/white-controller.png">
+          Master</a>
+        <a href="" class="sm:text-lg text-sm uppercase font-semibold text-white">Gear Up for Greatness</a>
+      </div>
+      <div class="flex flex-grow  items-center pl-4 min-w-10">
+        <form action=""
+          class="focus-within:outline   flex-grow h-10 flex overflow-hidden rounded-3xl sm:max-w-80 max-w-14">
+          <input type="text" name="Search" id=""
+            class="sm:block hidden text-lg font-semibold outline-none px-6 border-none flex-grow "
+            placeholder="Search...">
+          <button type="button"
+            class="block sm:min-w-12 flex-grow duration-300 bg-zinc-200 hover:bg-zinc-400  bg-no-repeat bg-center bg-contain bg-[url('/src/assets/icons/search-icon.png')] "
+            title="Search"></button>
+        </form>
+      </div>
+      <div class="lg:flex   flex-col hidden w-52 items-center justify-center flex-shrink-0">
+        <a href="#" class="text-white font-bold text-lg uppercase">My Account</a>
+        <a href="#"><img src="src/assets/icons/white-controller.png" title="My Account" alt="My Account"
+            class="max-w-10"></a>
+      </div>
+      <div class="sm:hidden flex items-center ">
+        <button title="Toggle"
+          class="bg-white bg-no-repeat bg-center bg-contain bg-[url('/src/assets/icons/burger-bar.png')] p-4"
+          id="burger"></button>
+      </div>
+    </div>
+  </header>
+  <nav id="navigation-links" class="container bg-white max-w-full  p-1 sticky sm:top-20 top-14 z-50  sm:block hidden  ">
+    <ul class="flex justify-between sm:flex-row flex-col">
+      <li class="flex-grow border-r-4 border-black"><a
+          class="block p-1 text-center hover:bg-gray-600 hover:text-white text-lg  " href="#">Home</a></li>
+      <li class="flex-grow border-r-4 border-black"><a
+          class="block p-1 text-center hover:bg-gray-600 hover:text-white text-lg " href="#">Console</a></li>
+      <li class="flex-grow border-r-4 border-black"><a
+          class="block p-1 text-center hover:bg-gray-600 hover:text-white text-lg " href="#">Games</a></li>
+      <li class="md:inline  flex-grow border-r-4 border-black"><a
+          class="block p-1 text-center hover:bg-gray-600 hover:text-white text-lg " href="#">Specials</a></li>
+      <li class="md:inline  flex-grow border-r-4 border-black"><a
+          class="block p-1 text-center hover:bg-gray-600 hover:text-white text-lg " href="#">Accessories</a></li>
+      <li class="md:inline  flex-grow border-r-4 border-black"><a
+          class="block p-1 text-center hover:bg-gray-600 hover:text-white text-lg " href="#">Track Order</a></li>
+      <li class="md:inline  flex-grow border-r-4 border-black"><a
+          class="block p-1 text-center hover:bg-gray-600 hover:text-white text-lg " href="#">Physical Order</a>
+      </li>
+    </ul>
+  </nav>
+  <script>
+    document.getElementById('burger').addEventListener('click', () => {
+      document.getElementById('navigation-links').classList.toggle('hidden');
+      document.getElementById('navigation-links').classList.replace('sticky', 'fixed');
+      document.querySelector('.navigation-links li').classList.toggle('border-r-4', 'border-none');
+
+    });
+  </script>
+  <main class="flex flex-col">
+    <section class="container relative  max-w-full">
+      <div class="carousell flex overflow-auto snap-x  scroll-smooth  snap-start  snap-mandatory ">
+        <img class="flex-shrink-0 snap-start object-cover w-full " src="src/assets/images/carousell/carousell_1.png"
+          alt="">
+        <img class="flex-shrink-0 snap-start object-cover w-full" src="src/assets/images/carousell/carousell_2.png"
+          alt="">
+        <img class="flex-shrink-0 snap-start object-cover w-full" src="src/assets/images/carousell/carousell_3.png"
+          alt="">
+        <img class="flex-shrink-0 snap-start object-cover w-full" src="src/assets/images/carousell/carousell_4.png"
+          alt="">
+        <img class="flex-shrink-0 snap-start object-cover w-full" src="src/assets/images/carousell/carousell_5.png"
+          alt="">
+
+        <div class="smflex hidden absolute left-1/3 bottom-3 gap-5">
+          <div class="bg-white p-2  rounded-xl"></div>
+          <div class="bg-white p-2 rounded-xl"></div>
+          <div class="bg-white p-2 rounded-xl"></div>
+          <div class="bg-white p-2 rounded-xl"></div>
+          <div class="bg-white p-2 rounded-xl"></div>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="flex flex-col">
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+        <p>asdasd</p>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
