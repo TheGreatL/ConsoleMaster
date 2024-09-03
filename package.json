@@ -1,15 +1,20 @@
 {
-  "name": "consolemaster",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"npx tailwindcss -i ./src/styles/custom-input-style.css -o ./src/styles/style.css --watch"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "tailwindcss": "^3.4.10"
-  }
+    "name": "consolemaster",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "npx tailwindcss -i ./src/styles/custom-input-style.css -o ./src/styles/style.css --watch"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "tailwindcss": "^3.4.10"
+    },
+    "dependencies": {
+        "eslint-config-prettier": "^9.1.0",
+        "prettier": "^3.3.3",
+        "prettier-plugin-tailwindcss": "^0.6.6"
+    }
 }
