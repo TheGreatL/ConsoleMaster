@@ -11,20 +11,20 @@
       display: none;
     }
   </style>
-  <script type="module" src="" defer></script>
+  <script type="module" src="src/pages/index.js" defer></script>
   <title>Console Master</title>
 </head>
 
 <body class="bg-blue-800">
-  <header class="sticky top-0 z-50 bg-blue-700  mb-1">
+  <header class="sticky top-0 z-50 bg-blue-700 ">
     <div class="container flex max-w-full flex-row px-3">
       <div class="flex flex-col    items-center justify-center px-1 sm:flex-shrink-0">
-        <a href="#" class="text-xsm font-semibold uppercase text-white sm:text-xl">
+        <a href="index.html" class="text-xsm font-semibold uppercase text-white sm:text-xl">
           Console
-          <img class="inline-block max-w-5 rotate-12 sm:max-w-14" title="Console Master"
+          <img class="inline-block max-w-8 rotate-12 sm:max-w-14" title="Console Master"
             src="src/assets/icons/white-controller.png" />
           Master</a>
-        <a href="" class="text-xsm  font-semibold uppercase text-white sm:text-lg">Gear Up for
+        <a href="index.html" class="text-xsm  font-semibold uppercase text-white sm:text-lg">Gear Up for
           Greatness</a>
       </div>
       <div class="flex min-w-10 flex-grow items-center pl-4">
@@ -45,98 +45,141 @@
       </div>
       <div class="flex items-center sm:hidden">
         <button title="Toggle"
-          class="bg-white bg-[url('/src/assets/icons/burger-bar.png')] bg-contain bg-center bg-no-repeat p-3 rounded-md"
+          class="bg-white bg-[url('/src/assets/icons/burger-bar.png')] bg-contain bg-center bg-no-repeat p-4 rounded-md"
           id="burger"></button>
       </div>
     </div>
   </header>
-  <nav id="navigation-links" class="container sticky top-8 z-50 hidden max-w-full bg-white p-1 sm:top-20 sm:block">
+  <nav id="navigation-links" class="container fixed sm:sticky top-8 z-50 hidden max-w-full bg-white p-1 sm:top-20 sm:block">
     <ul class="flex flex-col justify-between sm:flex-row">
-      <li class="flex-grow border-r-4 border-black">
-        <a class="block p-1 text-center text-lg hover:bg-gray-600 hover:text-white" href="#">Home</a>
+      <li class="flex-grow sm:border-r-4 border-b-0 sm:border-black ">
+        <a class="block p-1 text-center sm:text-lg text-sm hover:bg-gray-600 hover:text-white" href="index.html">Home</a>
       </li>
-      <li class="flex-grow border-r-4 border-black">
-        <a class="block p-1 text-center text-lg hover:bg-gray-600 hover:text-white" href="#">Console</a>
+      <li class="flex-grow sm:border-r-4 border-b-0 sm:border-black ">
+        <a class="block p-1 text-center sm:text-lg text-sm hover:bg-gray-600 hover:text-white" href="src/pages/consoles.html">Console</a>
       </li>
-      <li class="flex-grow border-r-4 border-black">
-        <a class="block p-1 text-center text-lg hover:bg-gray-600 hover:text-white" href="#">Games</a>
+      <li class="flex-grow sm:border-r-4 border-b-0 sm:border-black ">
+        <a class="block p-1 text-center sm:text-lg text-sm hover:bg-gray-600 hover:text-white" href="#">Games</a>
       </li>
-      <li class="flex-grow border-r-4 border-black md:inline">
-        <a class="block p-1 text-center text-lg hover:bg-gray-600 hover:text-white" href="#">Specials</a>
+      <li class="flex-grow sm:border-r-4 border-b-0 sm:border-black  md:inline">
+        <a class="block p-1 text-center sm:text-lg text-sm hover:bg-gray-600 hover:text-white" href="#">Specials</a>
       </li>
-      <li class="flex-grow border-r-4 border-black md:inline">
-        <a class="block p-1 text-center text-lg hover:bg-gray-600 hover:text-white" href="#">Accessories</a>
+      <li class="flex-grow sm:border-r-4 border-b-0 sm:border-black  md:inline">
+        <a class="block p-1 text-center sm:text-lg text-sm hover:bg-gray-600 hover:text-white" href="#">Accessories</a>
       </li>
-      <li class="flex-grow border-r-4 border-black md:inline">
-        <a class="block p-1 text-center text-lg hover:bg-gray-600 hover:text-white" href="#">Track Order</a>
+      <li class="flex-grow sm:border-r-4 border-b-0 sm:border-black  md:inline">
+        <a class="block p-1 text-center sm:text-lg text-sm hover:bg-gray-600 hover:text-white" href="#">Track Order</a>
       </li>
-      <li class="flex-grow border-r-4 border-black md:inline">
-        <a class="block p-1 text-center text-lg hover:bg-gray-600 hover:text-white" href="#">Physical Order</a>
+      <li class="flex-grow sm:border-r-4 border-b-0 sm:border-black  md:inline">
+        <a class="block p-1 text-center sm:text-lg text-sm hover:bg-gray-600 hover:text-white" href="#">Physical
+          Order</a>
       </li>
     </ul>
   </nav>
-  <script>
-    document.getElementById("burger").addEventListener("click", () => {
-      document
-        .getElementById("navigation-links")
-        .classList.toggle("hidden")
-      document
-        .getElementById("navigation-links")
-        .classList.replace("sticky", "fixed")
-    })
-  </script>
-  <main class="flex flex-col">
-    <section class="container relative max-w-full">
-      <div class="hide-scroll-bar flex snap-x snap-mandatory snap-start scroll-smooth overflow-auto ">
-        <img class="w-full flex-shrink-0 snap-start object-cover" src="src/assets/images/carousell/carousell_1.png"
-          alt="" />
-        <img class="w-full flex-shrink-0 snap-start object-cover" src="src/assets/images/carousell/carousell_2.png"
-          alt="" />
-        <img class="w-full flex-shrink-0 snap-start object-cover" src="src/assets/images/carousell/carousell_3.png"
-          alt="" />
-        <img class="w-full flex-shrink-0 snap-start object-cover" src="src/assets/images/carousell/carousell_4.png"
-          alt="" />
-        <img class="w-full flex-shrink-0 snap-start object-cover" src="src/assets/images/carousell/carousell_5.png"
-          alt="" />
-
-        <div class="absolute left-1/2 sm:flex -translate-x-1/2 transform hidden sm:bottom-8 sm:gap-5">
-          <div class="cursor-pointer rounded-xl bg-white p-1 sm:p-2"></div>
-          <div class="cursor-pointer rounded-xl bg-white p-1 sm:p-2"></div>
-          <div class="cursor-pointer rounded-xl bg-white p-1 sm:p-2"></div>
-          <div class="cursor-pointer rounded-xl bg-white p-1 sm:p-2"></div>
-          <div class="cursor-pointer rounded-xl bg-white p-1 sm:p-2"></div>
+  <!-- <main class="flex flex-col gap-2 sm:flex-row sm:p-6 md:h-full">
+     <section class="flex bg-white rounded-lg overflow-hidden mx-3 mt-5 sm:container sm:min-h-screen">
+        <div class="flex flex-col gap-1 bg-yellow-300 justify-center items-center sm:gap-10">
+            <img class="other-product-image mx-3 w-12 min-h-11 max-h-14 cursor-pointer rounded-lg sm:w-20 sm:min-h-24" src="src/assets/images/items-image/ps-5-hand-held.png" alt="">
+            <img class="other-product-image mx-3 w-12 min-h-11 max-h-14 cursor-pointer rounded-lg sm:w-20 sm:min-h-24" src="src/assets/images/items-image/ps-5-hand-held.png" alt="">
+            <img class="other-product-image mx-3 w-12 min-h-11 max-h-14 cursor-pointer rounded-lg sm:w-20 sm:min-h-24" src="src/assets/images/items-image/ps-5-hand-held.png" alt="">
+            <img class="other-product-image mx-3 w-12 min-h-11 max-h-14 cursor-pointer rounded-lg sm:w-20 sm:min-h-24" src="src/assets/images/items-image/ps-5-hand-held.png" alt="">
         </div>
-      </div>
-    </section>
-    <section class="container relative max-w-full sm:p-10 p-1 mt-8 ">
-      <div class="flex bg-white rounded-md sm:p-7 p-2 flex-col ">
-        <h1 class="font-bold sm:text-3xl text-sm">Flash Sales</h1>
-        <!--Item Container-->
-        <div
-          class="hide-scroll-bar flex overflow-auto sm:p-4 justify-start flex-grow bg-gray-400 p-2 snap-x sm:gap-5 gap-2 scroll-smooth  snap-mandatory snap-start  ">
-          <!-- Items-->
-          <div
-            class="flex flex-col sm:max-w-64 max-w-24 min-w-24 sm:min-w-64 shadow-sm  shadow-gray-500   bg-yellow-400 rounded-xl overflow-hidden cursor-pointer snap-end ">
-            <img class="h-20 sm:h-52" src="src/assets/images/items-image/ps2-controller.png" alt="">
-            <p class="pl-0.1 m-0.5 text-wrap  text-xsm  sm:my-0 sm:text-2xl sm:pl-2 font-semibold ">Ps2 Controller with
-              Automated
-              Machine</p>
-            <p class="pl-0.1 m-0.5 text-xsm  sm:mt-0 sm:mb-3 sm:text-base sm:pl-2">Product Discount</p>
-            <p class="pl-0.1 m-0.5 mb-2  text-xsm sm:mt-2 sm:mb-4 sm:text-xl sm:pl-2 font-bold">Product Price</p>
-          </div>
-
+        <div class="flex flex-grow items-center justify-center p-5 sm:p-10">
+            <img class="cursor-pointer product-image w-44 h-60  sm:min-h-full sm:min-w-full" src="src/assets/images/items-image/read-dead-redemption.png" alt="">
         </div>
-
-
-
-      </div>
-      </div>
-      <button
-        class="absolute sm:inline-block hidden px-4 py-2 bg-red-500 text-3xl font-semibold rounded-2xl  left-2 top-1/2">^</button>
-      <button
-        class="absolute sm:inline-block hidden px-4 py-2 bg-red-500 text-3xl font-semibold rounded-2xl  right-2 top-1/2">></button>
     </section>
-  </main>
+    <section class="flex flex-grow  flex-col  bg-white rounded-sm p-2  m-1 sm:container sm:rounded-md gap-0.5 ">
+            <div class="flex flex-col border-b-2 border-b-gray-300 pb-2 sm:gap-2">
+                <p class="font-semibold text-sm text-red-600 space tracking-widest sm:text-2xl">Creator</p>
+                <p class="text-lg font-bold sm:text-4xl">NSW NBA 2K24 Kobe Bryant Edition (US)</p>
+                <p class="text-sm sm:text-2xl">⭐⭐⭐⭐⭐ Reviews 5</p>
+                <p class="text-sm sm:text-xl">Available: In stock</p>
+                <div class="flex">
+                  <p class="flex-grow text-sm font-semibold sm:text-2xl">Game Key: 5026555427807</p>
+                  <ul class="flex gap-3 items-center">
+                    <li><a href="https://www.facebook.com/"><img class="w-4 sm:w-6" src="src/assets/icons/social-icons/facebook.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com/"><img class="w-4 sm:w-6" src="src/assets/icons/social-icons/instagram.png" alt=""></a></li>
+                    <li><a href="https://www.tiktok.com/"><img class="w-4 sm:w-6" src="src/assets/icons/social-icons/tik-tok.png" alt=""></a></li>
+                    <li><a href="https://www.x.com/"><img class="w-4 sm:w-6" src="src/assets/icons/social-icons/twitter.png" alt=""></a></li>
+                  </ul>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-col-reverse">
+              <div class="flex flex-col border-b-2 border-b-gray-300 pb-2">
+                <p class="text-base tracking-widest font-bold sm:text-2xl">Description</p>
+                <p class="text-sm sm:text-xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex minima veniam nostrum et eaque voluptatum unde harum doloremque, officia assumenda saepe error. Reprehenderit itaque velit consequatur. Corrupti rem quaerat expedita.</p>
+              </div>
+              <div class="flex flex-col border-b-2 border-b-gray-300 pb-2 gap-2" >
+                <p class="font-bold text-xl sm:text-3xl">Price: P32323</p>
+                <form class="flex gap-2 items-center" action="">
+                  <p class="sm:text-2xl">Quantity:</p>
+                    <div class="flex flex-grow items-center  bg-yellow-500 max-w-48 rounded-xl overflow-hidden ">
+                      <p class="flex-grow  text-center text-xl font-semibold sm:text-2xl">1</p>
+                      <div class="flex gap-2">
+                        <button type="button"  class="px-4 bg-gray-400 p-2 text-3xl sm:text-4xl">+</button>
+                        <button type="button"  class="px-4 bg-gray-400 p-2 text-3xl sm:text-4xl">-</button>
+                      </div>
+                    </div>
+                </form>
+                <button class="uppercase self-start bg-blue-400 px-4 py-2 rounded-md text-lg">Add to cart</button>
+              </div>
+            </div>
+            
+            
+    </section> 
+</main> 
+-->
+<main class="flex flex-col">
+  <section class="container relative max-w-full">
+    <div id="carousell-container" class="hide-scroll-bar flex snap-x snap-mandatory snap-start scroll-smooth overflow-auto">
+      <img class="w-full flex-shrink-0 snap-start object-cover" src="src/assets/images/carousell/carousell_1.png"
+        alt="" />
+      <img class="w-full flex-shrink-0 snap-start object-cover" src="src/assets/images/carousell/carousell_2.png"
+        alt="" />
+      <img class="w-full flex-shrink-0 snap-start object-cover" src="src/assets/images/carousell/carousell_3.png"
+        alt="" />
+      <img class="w-full flex-shrink-0 snap-start object-cover" src="src/assets/images/carousell/carousell_4.png"
+        alt="" />
+      <img class="w-full flex-shrink-0 snap-start object-cover" src="src/assets/images/carousell/carousell_5.png"
+        alt="" />
+
+      <div class="absolute left-1/2 sm:flex -translate-x-1/2 transform hidden sm:bottom-8 sm:gap-5">
+        <div class="carousell-indicator cursor-pointer rounded-xl bg-white p-1 sm:p-2"></div>
+        <div class="carousell-indicator cursor-pointer rounded-xl bg-white p-1 sm:p-2"></div>
+        <div class="carousell-indicator cursor-pointer rounded-xl bg-white p-1 sm:p-2"></div>
+        <div class="carousell-indicator cursor-pointer rounded-xl bg-white p-1 sm:p-2"></div>
+        <div class="carousell-indicator cursor-pointer rounded-xl bg-white p-1 sm:p-2"></div>
+      </div>
+    </div>
+  </section>
+  <section class="container relative max-w-full sm:p-10 p-1 mt-8 ">
+    <div class="flex bg-white rounded-md sm:p-7 p-2 flex-col ">
+      <h1 class="font-bold sm:text-3xl text-sm">Flash Sales</h1>
+      <!--Item Container-->
+      <div
+        id="item-container"
+        class="hide-scroll-bar flex overflow-auto sm:p-4 justify-start flex-grow bg-gray-400 p-2 snap-x sm:gap-5 gap-2 scroll-smooth  snap-mandatory snap-start  ">
+        <!-- Items-->
+        <!-- <div
+          class="flex flex-col sm:min-w-64 md:min-w-32 md:bg-green-400 max-w-24 min-w-24  shadow-sm  shadow-gray-500   bg-yellow-400 rounded-xl overflow-hidden cursor-pointer snap-end ">
+          <img class="h-20 sm:h-52" src="src/assets/images/items-image/ps-2-console.png" alt="">
+          <p class="pl-0.1 m-0.5 text-wrap  text-xsm  sm:my-0 sm:text-2xl sm:pl-2 font-semibold ">Ps2 Controller with
+            Automated
+            Machine</p>
+          <p class="pl-0.1 m-0.5 text-xsm  sm:mt-0 sm:mb-3 sm:text-base sm:pl-2">Product Discount</p>
+          <p class="pl-0.1 m-0.5 mb-2  text-xsm sm:mt-2 sm:mb-4 sm:text-xl sm:pl-2 font-bold">Product Price</p>
+        </div> -->
+
+      </div>
+
+    </div>
+    </div>
+    <button
+      class="absolute sm:inline-block hidden px-4 py-2 bg-red-500 text-3xl font-semibold rounded-2xl  left-2 top-1/2">^</button>
+    <button
+      class="absolute sm:inline-block hidden px-4 py-2 bg-red-500 text-3xl font-semibold rounded-2xl  right-2 top-1/2">></button>
+  </section>
+</main>
 
 </body>
 
