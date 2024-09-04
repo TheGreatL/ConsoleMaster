@@ -1,5 +1,5 @@
 import { getItem,getAllItems,getItemSize } from "./items.js";
-import { clearMain } from "../utils/clear_main.js";
+import { clearMain } from "../utils/utility.js";
 import { initProductDetails } from "./display_product_details.js";
 export function displayHomePage(){
         getAllItems().forEach((item,index)=>{
@@ -80,12 +80,4 @@ function setIndicator(position){
        
     });
     carousellIndicator[position].className ='carousell-indicator cursor-pointer rounded-xl p-1 sm:p-2 bg-gray-700';
-}
-export function toggleMenuButton(){
-const burgerButton = document.getElementById("burger");
-     burgerButton.addEventListener("click", () => {
-        const navigationLinks = document.getElementById('navigation-links');
-        navigationLinks.classList.toggle('hidden');
-   
-});
 }

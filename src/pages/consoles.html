@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <link rel="shortcut icon" href="src/assets/icons/white-controller.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="/src/assets/icons/white-controller.png" type="image/x-icon" />
   <link rel="stylesheet" href="/src/styles/style.css" />
 
   <title>Console Master Consoles</title>
@@ -71,11 +71,113 @@
     </ul>
   </nav>
 
-    <main class="flex">
-            <section >
-                <p>asd</p>
+    <main class="flex  flex-col pt-4 sm:flex-row sm:gap-4 sm:p-3">
+            <seaction class="flex justify-evenly  border-collapse sm:hidden">
+              <button class="toggle-filter-button flex-grow text-lg border-2 border-black active:bg-gray-500 active:text-white bg-white shadow-2xl shadow-yellow-500  ">Filter</button>
+              <button class="toggle-filter-button flex-grow text-lg border-2 border-black active:bg-gray-500 active:text-white bg-white shadow-2xl shadow-yellow-500 ">Sort</button>
+            </seaction>
+            <section id="filter-container" class=" hidden flex-col  bg-white  mt-2 fixed right-0 left-24 h-full top-9 p-2 sm:flex overflow-auto sm:static sm:container sm:max-w-96 sm:rounded-md" >
+                  <div class="flex flex-col border-b-2 border-b-gray-300 pb-2">
+                    <p class="self-center uppercase font-semibold tracking-wider">Price</p>
+                      <div class="flex justify-around">
+                          <button class="px-2 bg-gray-200 rounded-lg text-lg">MIN</button>
+                          <span id="price" class="font-semibold text-lg text-center  flex-grow max-w-24">0</span>
+                          <button class="px-2 bg-gray-200 rounded-lg text-lg">MAX</button>
+                      </div>
+                      <input class="my-1" type="range" name="price range" id="priceRange" title="price range" max="2000" value="0" step="500" min="0">
+                  </div>
+                  <div class="flex flex-col border-b-2 border-b-gray-300 pb-2">
+                    <p class="self-center uppercase font-semibold tracking-wider ">Brand</p>
+                      <div class="flex gap-2 my-0.5">
+                        <input type="checkbox" id="playstation" value="playstation">
+                        <label for="playstation">PlayStation</label>
+                      </div>
+                      <div class="flex gap-2 my-0.5">
+                        <input type="checkbox" id="sega" value="sega">
+                        <label for="sega">Sega</label>
+                      </div>
+                      <div class="flex gap-2 my-0.5">
+                        <input type="checkbox" id="nintendo" value="nintentdo">
+                        <label for="nintendo">Nintentdo</label>
+                      </div>
+                      <div class="flex gap-2 my-0.5">
+                        <input type="checkbox" id="xbox" value="xbox">
+                        <label for="xbox">Xbox</label>
+                      </div>
+                      <div class="flex gap-2 my-0.5">
+                        <input type="checkbox" id="wii" value="wii">
+                        <label for="wii">Wii</label>
+                      </div>
+                  </div>
+                  <div class="flex flex-col border-b-2 border-b-gray-300 pb-2">
+                    <p class="self-center uppercase font-semibold tracking-wider ">Console Type</p>
+                      <div class="flex gap-2 my-0.5">
+                        <input type="checkbox" id="playstation" value="playstation">
+                        <label for="playstation">PlayStation</label>
+                      </div>
+                      <div class="flex gap-2 my-0.5">
+                        <input type="checkbox" id="sega" value="sega">
+                        <label for="sega">Sega</label>
+                      </div>
+                      <div class="flex gap-2 my-0.5">
+                        <input type="checkbox" id="nintendo" value="nintentdo">
+                        <label for="nintendo">Nintentdo</label>
+                      </div>
+                      <div class="flex gap-2 my-0.5">
+                        <input type="checkbox" id="xbox" value="xbox">
+                        <label for="xbox">Xbox</label>
+                      </div>
+                      <div class="flex gap-2 my-0.5">
+                        <input type="checkbox" id="wii" value="wii">
+                        <label for="wii">Wii</label>
+                      </div>
+                  </div>
+                  <div class="flex flex-col border-b-2 border-b-gray-300 pb-2">
+                    <p class="self-center uppercase font-semibold tracking-wider ">Rating</p>
+                      <div class="flex gap-2 my-0.5">
+                        <input type="checkbox" id="playstation" value="playstation">
+                        <label for="playstation">⭐⭐⭐⭐⭐</label>
+                      </div>
+                      <div class="flex gap-2 my-0.5">
+                        <input type="checkbox" id="sega" value="sega">
+                        <label for="sega">⭐⭐⭐⭐</label>
+                      </div>
+                      <div class="flex gap-2 my-0.5">
+                        <input type="checkbox" id="nintendo" value="nintentdo">
+                        <label for="nintendo">⭐⭐⭐</label>
+                      </div>
+                      <div class="flex gap-2 my-0.5">
+                        <input type="checkbox" id="xbox" value="xbox">
+                        <label for="xbox">⭐⭐</label>
+                      </div>
+                      <div class="flex gap-2 my-0.5">
+                        <input type="checkbox" id="wii" value="wii">
+                        <label for="wii">⭐</label>
+                      </div>
+                      
+                  </div>
+                  
+            </section>
+            <!-- Item Content -->
+            <section class="bg-white flex-grow">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quam aperiam incidunt labore? Illo doloremque placeat adipisci. Reprehenderit doloribus voluptas iure, aut error nam, nihil aliquam ab vitae laborum debitis.</p>
             </section>
     </main>
+    <script>
+        const range = document.getElementById('priceRange');
+        range.addEventListener('input',()=>{
+            const price = document.getElementById('price');
+            price.textContent= range.value;
+        });
+        const toggleFilterButtons = document.querySelectorAll('.toggle-filter-button');
+        toggleFilterButtons.forEach(button=>{
+            button.addEventListener('click',()=>{
+                const filterContainer =document.getElementById('filter-container');
+                filterContainer.classList.toggle('hidden');
+                console.log("Clicked");
+            });
+        });
+    </script>
 </body>
 
 </html>
