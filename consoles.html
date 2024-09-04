@@ -23,12 +23,12 @@
       </div>
       <div class="flex min-w-10 flex-grow items-center pl-4">
         <form action=""
-          class="flex h-5 sm:h-10 max-w-10 flex-grow overflow-hidden rounded-3xl focus-within:outline sm:max-w-80">
+          class="flex h-7 sm:h-10 max-w-10 flex-grow overflow-hidden rounded-3xl focus-within:outline sm:max-w-80">
           <input type="text" name="Search" id=""
             class="hidden flex-grow border-none px-6 text-lg font-semibold outline-none sm:block"
             placeholder="Search..." />
           <button type="button"
-            class="block flex-grow bg-zinc-200 bg-[url('/src/assets/icons/search-icon.png')] bg-contain bg-center bg-no-repeat duration-300 hover:bg-zinc-400 sm:min-w-12"
+            class="block flex-grow bg-zinc-200 bg-[url('src/assets/icons/search-icon.png')] bg-contain bg-center bg-no-repeat duration-300 hover:bg-zinc-400 sm:min-w-12"
             title="Search"></button>
         </form>
       </div>
@@ -39,7 +39,7 @@
       </div>
       <div class="flex items-center sm:hidden">
         <button title="Toggle"
-          class="bg-white bg-[url('/src/assets/icons/burger-bar.png')] bg-contain bg-center bg-no-repeat p-4 rounded-md"
+          class="bg-white bg-[url('src/assets/icons/burger-bar.png')] bg-contain bg-center bg-no-repeat p-4 rounded-md"
           id="burger"></button>
       </div>
     </div>
@@ -159,17 +159,17 @@
             <section id="item-consoles-container" class=" flex-grow content-center xl:gap-7 sm:gap-3  mt-5 grid grid-cols-2 gap-y-1 grid-flow-row sm:grid-cols-3 sm:content-start  hide-scroll-bar sm:overflow-auto sm:h-screen xl:grid-cols-4  2xl:grid-cols-5">
 
               <div class="flex sm:mx-auto flex-col sm:gap-3 justify-start h-full gap-1 sm:max-w-60 lg:max-w-96  sm:h-full bg-gray-200 rounded-sm border-2 border-gray-700 cursor-pointer  hover:shadow-sm hover:shadow-gray-200 ">
-                  <img class="h-40 mb-2 lg:h-60" src="/src/assets/images/items-image/read-dead-redemption.png" alt="">
+                  <img class="h-40 mb-2 lg:h-60" src="src/assets/images/items-image/read-dead-redemption.png" alt="">
                   <p class="pl-2 font-semibold text-sm  lg:text-3xl">Read Dead Redepmtion</p>
                   <p class="pl-2 font-bold text-lg text-center uppercase mt-auto">Price</p>
-                  <button type="button" class="uppercase bg-blue-400 m-2 text-white font-medium lg:p-5">add to cart</button>
+                  <button type="button" class="uppercase bg-blue-400 m-2 p-2 text-white font-medium lg:p-5">add to cart</button>
               </div>
             
               <div class="flex sm:mx-auto flex-col sm:gap-3 justify-start h-full gap-1 sm:max-w-60 lg:max-w-96  sm:h-full bg-gray-200 rounded-sm border-2 border-gray-700 cursor-pointer  hover:shadow-sm hover:shadow-gray-200 ">
-                <img class="h-40 mb-2 lg:h-60" src="/src/assets/images/items-image/read-dead-redemption.png" alt="">
+                <img class="h-40 mb-2 lg:h-60" src="src/assets/images/items-image/read-dead-redemption.png" alt="">
                 <p class="pl-2 font-semibold text-sm lg:text-3xl">Read Dead Redepmtion</p>
                 <p class="pl-2 font-bold text-lg text-center uppercase mt-auto">Price</p>
-                <button type="button" class="uppercase bg-blue-400 m-2 text-white font-medium lg:p-5">add to cart</button>
+                <button type="button" class="uppercase bg-blue-400 m-2 p-2 text-white font-medium lg:p-5">add to cart</button>
             </div>
           
 
@@ -179,10 +179,10 @@
         const itemcontainer = document.getElementById('item-consoles-container');
         for(let i = 0; i<9; i++){
           itemcontainer.innerHTML+=`  <div class="flex sm:mx-auto flex-col sm:gap-3 justify-start h-full gap-1 sm:max-w-60 lg:max-w-96  sm:h-full bg-gray-200 rounded-sm border-2 border-gray-700 cursor-pointer  hover:shadow-sm hover:shadow-gray-200 ">
-                  <img class="h-40 mb-2 lg:h-60" src="/src/assets/images/items-image/read-dead-redemption.png" alt="">
+                  <img class="h-40 mb-2 lg:h-60" src="src/assets/images/items-image/read-dead-redemption.png" alt="">
                   <p class="pl-2 font-semibold text-sm lg:text-3xl">Read Dead Redepmtion</p>
                 <p class="pl-2  font-bold text-lg text-center uppercase   mt-auto">Price</p>
-                  <button type="button" class="uppercase bg-blue-400 m-2 text-white font-medium lg:p-5">add to cart</button>
+                  <button type="button" class="uppercase bg-blue-400 m-2 p-2 text-white font-medium lg:p-5">add to cart</button>
               </div>`;
         }
         const range = document.getElementById('priceRange');

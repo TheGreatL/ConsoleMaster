@@ -742,6 +742,10 @@ video {
   height: 100%;
 }
 
+.h-7{
+  height: 1.75rem;
+}
+
 .max-h-14{
   max-height: 3.5rem;
 }
@@ -1053,6 +1057,14 @@ video {
 
 .bg-\[url\(\'\/src\/assets\/icons\/search-icon\.png\'\)\]{
   background-image: url('/src/assets/icons/search-icon.png');
+}
+
+.bg-\[url\(\'src\/assets\/icons\/search-icon\.png\'\)\]{
+  background-image: url('src/assets/icons/search-icon.png');
+}
+
+.bg-\[url\(\'src\/assets\/icons\/burger-bar\.png\'\)\]{
+  background-image: url('src/assets/icons/burger-bar.png');
 }
 
 .bg-contain{
