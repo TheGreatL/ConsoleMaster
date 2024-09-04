@@ -2,7 +2,7 @@ export function initProductDetails(){
     const main = document.querySelector('main');
     main.className='flex flex-col gap-2 sm:flex-row sm:p-6 md:h-full';
     main.innerHTML=`   
-      <section class="flex bg-white rounded-lg overflow-hidden mx-3 mt-5 sm:container sm:min-h-screen">
+      <section class="flex bg-white rounded-lg overflow-hidden mx-3 mt-5 sm:container lg:min-h-screen lg:bg-green-600 sm:bg-yellow-400 ">
         <div class="flex flex-col gap-1 bg-yellow-300 justify-center items-center sm:gap-10">
             <img class="other-product-image mx-3 w-12 min-h-11 max-h-14 cursor-pointer rounded-lg sm:w-20 sm:min-h-24" src="src/assets/images/items-image/ps-5-hand-held.png" alt="">
             <img class="other-product-image mx-3 w-12 min-h-11 max-h-14 cursor-pointer rounded-lg sm:w-20 sm:min-h-24" src="src/assets/images/items-image/ps-5-hand-held.png" alt="">

@@ -71,12 +71,13 @@
     </ul>
   </nav>
 
-    <main class="flex  flex-col pt-4 sm:flex-row sm:gap-4 sm:p-3">
-            <seaction class="flex justify-evenly  border-collapse sm:hidden">
-              <button class="toggle-filter-button flex-grow text-lg border-2 border-black active:bg-gray-500 active:text-white bg-white shadow-2xl shadow-yellow-500  ">Filter</button>
-              <button class="toggle-filter-button flex-grow text-lg border-2 border-black active:bg-gray-500 active:text-white bg-white shadow-2xl shadow-yellow-500 ">Sort</button>
+    <main class="flex  flex-col pt-4 sm:flex-row sm:gap-4 sm:p-3 ">
+            <seaction class="grid grid-cols-2 justify-evenly  border-collapse sm:hidden ">
+              <button class="toggle-filter-button text-lg border-2 border-black active:bg-gray-500 active:text-white bg-white">Filter</button>
+              <button class="toggle-filter-button text-lg border-2 border-black active:bg-gray-500 active:text-white bg-white">Sort</button>
             </seaction>
-            <section id="filter-container" class=" hidden flex-col  bg-white  mt-2 fixed right-0 left-24 h-full top-9 p-2 sm:flex overflow-auto sm:static sm:container sm:max-w-96 sm:rounded-md" >
+            <!-- <section id="filter-container" class=" hidden flex-col  bg-white  mt-2 fixed right-0 left-24 h-full top-9 p-2 sm:flex overflow-auto sm:static sm:container sm:max-w-96 sm:rounded-md" > -->
+            <section id="filter-container" class=" hidden flex-col  bg-white  mt-2 fixed right-0 left-24 h-full top-9 p-2 sm:flex overflow-auto sm:static sm:container sm:max-w-96 sm:rounded-md lg:min-h-lvh" >
                   <div class="flex flex-col border-b-2 border-b-gray-300 pb-2">
                     <p class="self-center uppercase font-semibold tracking-wider">Price</p>
                       <div class="flex justify-around">
@@ -112,58 +113,78 @@
                   <div class="flex flex-col border-b-2 border-b-gray-300 pb-2">
                     <p class="self-center uppercase font-semibold tracking-wider ">Console Type</p>
                       <div class="flex gap-2 my-0.5">
-                        <input type="checkbox" id="playstation" value="playstation">
-                        <label for="playstation">PlayStation</label>
+                        <input type="checkbox" id="stationary" value="stationary">
+                        <label for="stationary">Stationary</label>
                       </div>
                       <div class="flex gap-2 my-0.5">
-                        <input type="checkbox" id="sega" value="sega">
-                        <label for="sega">Sega</label>
+                        <input type="checkbox" id="handheld" value="handheld">
+                        <label for="handheld">Handheld</label>
                       </div>
                       <div class="flex gap-2 my-0.5">
-                        <input type="checkbox" id="nintendo" value="nintentdo">
-                        <label for="nintendo">Nintentdo</label>
+                        <input type="checkbox" id="hybrid" value="hybrid">
+                        <label for="hybrid">Hybrid</label>
                       </div>
                       <div class="flex gap-2 my-0.5">
-                        <input type="checkbox" id="xbox" value="xbox">
-                        <label for="xbox">Xbox</label>
-                      </div>
-                      <div class="flex gap-2 my-0.5">
-                        <input type="checkbox" id="wii" value="wii">
-                        <label for="wii">Wii</label>
+                        <input type="checkbox" id="virtual-reality" value="virtual-reality">
+                        <label for="virtual-reality">Virtual Reality</label>
                       </div>
                   </div>
                   <div class="flex flex-col border-b-2 border-b-gray-300 pb-2">
                     <p class="self-center uppercase font-semibold tracking-wider ">Rating</p>
                       <div class="flex gap-2 my-0.5">
-                        <input type="checkbox" id="playstation" value="playstation">
-                        <label for="playstation">⭐⭐⭐⭐⭐</label>
+                        <input type="checkbox" id="five-star" value="five-star">
+                        <label for="five-star">⭐⭐⭐⭐⭐</label>
                       </div>
                       <div class="flex gap-2 my-0.5">
-                        <input type="checkbox" id="sega" value="sega">
-                        <label for="sega">⭐⭐⭐⭐</label>
+                        <input type="checkbox" id="four-star" value="four-star">
+                        <label for="four-star">⭐⭐⭐⭐</label>
                       </div>
                       <div class="flex gap-2 my-0.5">
-                        <input type="checkbox" id="nintendo" value="nintentdo">
-                        <label for="nintendo">⭐⭐⭐</label>
+                        <input type="checkbox" id="three-star" value="three-star">
+                        <label for="three-star">⭐⭐⭐</label>
                       </div>
                       <div class="flex gap-2 my-0.5">
-                        <input type="checkbox" id="xbox" value="xbox">
-                        <label for="xbox">⭐⭐</label>
+                        <input type="checkbox" id="two-star" value="two-star">
+                        <label for="two-star">⭐⭐</label>
                       </div>
-                      <div class="flex gap-2 my-0.5">
-                        <input type="checkbox" id="wii" value="wii">
-                        <label for="wii">⭐</label>
+                      <div class="flex gap-2 my-0.5 ">
+                        <input type="checkbox" id="one-star" value="one-star">
+                        <label for="one-star">⭐</label>
                       </div>
                       
                   </div>
                   
             </section>
             <!-- Item Content -->
-            <section class="bg-white flex-grow">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quam aperiam incidunt labore? Illo doloremque placeat adipisci. Reprehenderit doloribus voluptas iure, aut error nam, nihil aliquam ab vitae laborum debitis.</p>
+            <section id="item-consoles-container" class=" flex-grow content-center xl:gap-7 sm:gap-3  mt-5 grid grid-cols-2 gap-y-1 grid-flow-row sm:grid-cols-3 sm:content-start  hide-scroll-bar sm:overflow-auto sm:h-screen xl:grid-cols-4  2xl:grid-cols-5">
+
+              <div class="flex sm:mx-auto flex-col sm:gap-3 justify-start h-full gap-1 sm:max-w-60 lg:max-w-96  sm:h-full bg-gray-200 rounded-sm border-2 border-gray-700 cursor-pointer  hover:shadow-sm hover:shadow-gray-200 ">
+                  <img class="h-40 mb-2 lg:h-60" src="/src/assets/images/items-image/read-dead-redemption.png" alt="">
+                  <p class="pl-2 font-semibold text-sm  lg:text-3xl">Read Dead Redepmtion</p>
+                  <p class="pl-2 font-bold text-lg text-center uppercase mt-auto">Price</p>
+                  <button type="button" class="uppercase bg-blue-400 m-2 text-white font-medium lg:p-5">add to cart</button>
+              </div>
+            
+              <div class="flex sm:mx-auto flex-col sm:gap-3 justify-start h-full gap-1 sm:max-w-60 lg:max-w-96  sm:h-full bg-gray-200 rounded-sm border-2 border-gray-700 cursor-pointer  hover:shadow-sm hover:shadow-gray-200 ">
+                <img class="h-40 mb-2 lg:h-60" src="/src/assets/images/items-image/read-dead-redemption.png" alt="">
+                <p class="pl-2 font-semibold text-sm lg:text-3xl">Read Dead Redepmtion</p>
+                <p class="pl-2 font-bold text-lg text-center uppercase mt-auto">Price</p>
+                <button type="button" class="uppercase bg-blue-400 m-2 text-white font-medium lg:p-5">add to cart</button>
+            </div>
+          
+
             </section>
     </main>
     <script>
+        const itemcontainer = document.getElementById('item-consoles-container');
+        for(let i = 0; i<9; i++){
+          itemcontainer.innerHTML+=`  <div class="flex sm:mx-auto flex-col sm:gap-3 justify-start h-full gap-1 sm:max-w-60 lg:max-w-96  sm:h-full bg-gray-200 rounded-sm border-2 border-gray-700 cursor-pointer  hover:shadow-sm hover:shadow-gray-200 ">
+                  <img class="h-40 mb-2 lg:h-60" src="/src/assets/images/items-image/read-dead-redemption.png" alt="">
+                  <p class="pl-2 font-semibold text-sm lg:text-3xl">Read Dead Redepmtion</p>
+                <p class="pl-2  font-bold text-lg text-center uppercase   mt-auto">Price</p>
+                  <button type="button" class="uppercase bg-blue-400 m-2 text-white font-medium lg:p-5">add to cart</button>
+              </div>`;
+        }
         const range = document.getElementById('priceRange');
         range.addEventListener('input',()=>{
             const price = document.getElementById('price');
